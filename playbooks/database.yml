@@ -1,0 +1,6 @@
+---
+- hosts: dbservers
+  become: true
+  tasks:
+    - name: install mariadb-server
+      yum: name=mariadb-server state=started update_cache=yes

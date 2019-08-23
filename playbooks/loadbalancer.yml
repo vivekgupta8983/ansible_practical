@@ -1,0 +1,6 @@
+---
+- hosts: webservers
+  tasks:
+    - name: install nginx
+      yum: name=httpd state=present update_cache=yes
+    
