@@ -1,6 +1,6 @@
 ---
 - hosts: webservers
   tasks:
-    - name: install nginx
+    - name: install Apache2
       yum: name=httpd state=present update_cache=yes
     
