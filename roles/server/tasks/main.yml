@@ -1,0 +1,15 @@
+---
+- name: Update yum cache
+  yum: update_cache=yes cache_valid_time=3600
+  sudo: yes
+
+- name: Install required software
+  yum: name={{ item }} state=present
+  sudo: yes
+  with_items:
+    - httpd
+    - mariadb-server
+    - php-mysql
+    - php
+    - php-mcrypt
+    - python-mysqldb
